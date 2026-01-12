@@ -1,0 +1,28 @@
+# Docker Compose configuration for Spartacus Libraries with Verdaccio
+version: '3.8'
+
+services:
+  spartacus-registry:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        # Change this to the Spartacus version you want to build
+        SPARTACUS_VERSION: "release/2211.40.x"
+    ports:
+      - "4873:4873"
+    volumes:
+      # Persist Verdaccio storage
+      - verdaccio-storage:/verdaccio/storage
+    container_name: spartacus-verdaccio
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "wget", "--quiet", "--tries=1", "--spider", "http://localhost:4873"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+volumes:
+  verdaccio-storage:
+    driver: local

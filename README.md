@@ -207,28 +207,15 @@ docker-compose down -v
 docker-compose up -d
 ```
 
-## Network Access
-
-To allow other team members to access the registry:
-
-1. **Replace `localhost` with your machine's IP address** when configuring npm
-2. **Ensure port 4873 is accessible** through your firewall
-3. **Use the host IP in .npmrc:**
-   ```
-   @spartacus:registry=http://192.168.1.100:4873
-   ```
-
 ## Production Deployment
 
-For production or team-wide use:
-- Deploy to a server accessible by your team
-- Consider using NGINX as a reverse proxy with HTTPS
-- Configure authentication in Verdaccio config
-- Set up persistent volumes for storage
-- Use environment variables for sensitive configuration
+This is intended for local development only. For production use, consider use of a hosted npm registry or a private npm repository solution.
+
+[More about SAP Composable Storefront Libraries](https://help.sap.com/docs/SAP_COMMERCE_COMPOSABLE_STOREFRONT/cfcf687ce2544bba9799aa6c8314ecd0/5de67850bd8d487181fef9c9ba59a31d.html?locale=en-US#installing-composablestorefront-libraries-from-the-repository-based-shipment-channel)
 
 ## Resources
 
-- [Spartacus Documentation](https://sap.github.io/spartacus-docs/)
+- [SAP Composable Storefront](https://help.sap.com/docs/SAP_COMMERCE_COMPOSABLE_STOREFRONT/cfcf687ce2544bba9799aa6c8314ecd0/3bbcccd2b5ea4aea8fa66e4a723bad76.html?locale=en-US/)
 - [Verdaccio Documentation](https://verdaccio.org/docs/what-is-verdaccio)
 - [Original Self-Publishing Guide](./self-publishing-spartacus-libraries.md)
+- [Spartacus GitHub Repository](https://github.com/SAP/spartacus)

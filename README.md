@@ -248,5 +248,5 @@ This is intended for local development only. For production use, consider use of
 
 - [SAP Composable Storefront](https://help.sap.com/docs/SAP_COMMERCE_COMPOSABLE_STOREFRONT/cfcf687ce2544bba9799aa6c8314ecd0/3bbcccd2b5ea4aea8fa66e4a723bad76.html?locale=en-US/)
 - [Verdaccio Documentation](https://verdaccio.org/docs/what-is-verdaccio)
-- [Original Self-Publishing Guide](./self-publishing-spartacus-libraries.md)
+- [Original Self-Publishing Guide](https://github.com/SAP/spartacus/blob/develop/docs/self-publishing-spartacus-libraries.md)
 - [Spartacus GitHub Repository](https://github.com/SAP/spartacus)

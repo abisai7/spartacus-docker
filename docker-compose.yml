@@ -8,7 +8,7 @@ services:
       dockerfile: Dockerfile
       args:
         # Change this to the Spartacus version you want to build
-        SPARTACUS_VERSION: "release/2211.40.x"
+        SPARTACUS_VERSION: "release/2211.43.x"
     ports:
       - "4873:4873"
     volumes:

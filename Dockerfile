@@ -2,7 +2,7 @@
 # This image builds Spartacus libraries from source and serves them via Verdaccio
 
 # Use Node.js LTS version (adjust based on Spartacus version requirements)
-FROM node:18-alpine
+FROM node:22-alpine
 
 # Set working directory
 WORKDIR /spartacus-build
@@ -14,7 +14,7 @@ RUN apk add --no-cache git bash curl expect
 RUN npm install -g ts-node verdaccio@4
 
 # Clone Spartacus repository
-ARG SPARTACUS_VERSION=release/2211.40.x
+ARG SPARTACUS_VERSION=release/2211.43.x
 RUN git clone https://github.com/SAP/spartacus.git . && \
     git checkout ${SPARTACUS_VERSION}
 

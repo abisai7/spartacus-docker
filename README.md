@@ -140,8 +140,8 @@ echo @spartacus:registry=http://localhost:4873 > .npmrc
 1. **Create a new Angular app:**
 
    ```bash
-   ng new spartacus-app --style=scss
-   cd spartacus-app
+   ng new mystore --style=scss --routing=false --standalone=false
+   cd mystore
    ```
 
 2. **Create `.npmrc` file in your project:**
@@ -169,8 +169,10 @@ echo @spartacus:registry=http://localhost:4873 > .npmrc
 4. **Add Spartacus to your application:**
 
    ```bash
-   ng add @spartacus/schematics --baseUrl https://your-commerce-backend-url
+   ng add @spartacus/schematics@~2211.43.0
    ```
+
+5. Follow the prompts to set up your Spartacus application.
 
 ### Upgrade existing application
 
